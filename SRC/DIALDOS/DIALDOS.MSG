@@ -1,0 +1,994 @@
+LEVEL6 {}
+
+
+
+
+NOACCESS {[0m
+GET OUT!
+
+} T User has no access to module.
+
+
+ENTRPASS {[0m
+Enter Password: } T Enter password
+
+
+ENTERDOS {[0m
+DialSoft(R) DS-DOS Shell
+  (C)Copyright DialSoft Corp 1996-2026.
+  Ported to The Major BBS v10 by Mark Laudenbach.
+} T Entrance to DS-DOS
+
+
+EXITNOW {[0m
+Returning to system...
+} T Exiting DS-DOS
+
+
+BADCMND {[0mBad command or file name
+} T Bad command or file name
+
+
+DEBUGMOD {[0mDebugging mode is now %s.
+} T DEBUG command output
+
+
+VERINFO {[0m%s
+} T VER command output
+
+
+ECHOIS {[0mECHO is %s
+} T ECHO command output
+
+
+PAUSE {[0mPress any key to continue . . .
+} T PAUSE command output
+
+
+MORE {[0m-- More --} T MORE command output
+
+
+ABORT {[0mAbort operation (Y/N)? } T Abort operation?
+
+
+NOWTIME {[0mCurrent time is %s
+} T TIME command output
+
+
+NEWTIME {[0mEnter new time: } T TIME - Enter new time
+
+
+BADTIME {[0m
+Invalid time
+} T TIME - Invalid time
+
+
+NOWDATE {[0mCurrent date is %s %s
+} T DATE command output
+
+
+NEWDATE {[0mEnter new date (mm-dd-yy): } T DATE - Enter new date
+
+
+BADDATE {[0m
+Invalid date
+} T TIME - Invalid date
+
+
+CHKDSK1 {[0m
+Volume %-11s created on %s %s
+Volume Serial Number is %s (This may take a while...)
+} T CHKDSK - Volume information
+
+
+CHKDSK1N {[0m
+Volume Serial Number is %s
+} T CHKDSK - Volume information (no volume)
+
+
+CHKDSK2 {[0m
+ %15s bytes total disk space
+ %15s bytes in %s hidden files
+ %15s bytes in %s directories
+} T CHKDSK - Disk information 2
+
+
+CHKDSK3 {[0m %15s bytes in %s user files
+ %15s bytes available on disk
+} T CHKDSK - Disk information 3
+
+
+CHKDSKF {[0m
+ %15s bytes in each allocation unit
+ %15s total allocation units on disk
+ %15s available allocation units on disk
+
+Instead of using CHKDSK, try shutting down the BBS and using SCANDISK.
+SCANDISK can reliably detect and fix a much wider range of disk problems.
+I'm sure you really don't care, though.
+
+} T CHKDSK - Disk information 4
+
+
+VOLUME {[0m
+ Volume in drive %c is %s
+ Volume Serial Number is %s
+} T VOLUME - Volume information
+
+
+VOLUMEN {[0m
+ Volume in drive %c has no label
+ Volume Serial Number is %s
+} T VOLUME - Volume information (no label)
+
+
+NEWLABEL {[0m Volume label (11 characters, ENTER for none)? } T LABEL - Enter new label name
+
+
+DIRHDR {[0m
+ Volume in drive %c is %s
+ Volume Serial Number is %s
+ Directory of %s
+
+} T DIR - Header information
+
+
+DIRHDRN {[0m
+ Volume in drive %c has no label
+ Volume Serial Number is %s
+ Directory of %s
+
+} T DIR - Header information (no label)
+
+
+DIROF {
+[0mDirectory of %s
+
+} T DIR - Recursive headers
+
+
+DIRFLST1 {[0m%s%-8s %-3s %13s  %s %6s
+} T DIR - File listing
+
+
+DIRDLST1 {[0m%s%-8s %-3s   %5s        %s %6s
+} T DIR - Directory listing
+
+
+DIRFTR {[0m%10s file(s) %14s bytes
+%10s dir(s) %15s bytes free
+} T DIR - Footer information
+
+
+CONTINNG {[0m
+(Continuing %s)
+} T DIR - Continuing header (dir /P)
+
+
+CLEARED {[0mYour DOSKEY history has been cleared.
+} T CLEAR - History cleared.
+
+
+NOCMDSRC {[0mNo commands to recall.
+} T HISTORY - No commands to recall
+
+
+HISTORY {[0m%2d: %s
+} T HISTORY - Command listing
+
+
+MEMMHDR {[0m
+Memory Type        Total       Used       Free
+----------------  --------   --------   --------
+} T MEM - Memory command header
+
+
+MEMMEXT {[0mExtended (XMS)    %7sK   %7sK   %7sK
+} T MEM - Extended memory information
+
+
+MEMMVDA {[0mVolatile (VDA)    %7sb   %7sb   %7sb
+} T MEM - VDA memory information
+
+
+MEMMFTR {[0m----------------  --------   --------   --------
+
+DS-DOS is resident in memory.
+
+} T MEM - Memory command header
+
+
+ALLDELTD {[0mAll files in directory will be deleted!
+Are you sure (Y/N)? } T DEL - All files will be deleted
+
+
+DELTREE {[0mDelete directory "%s" and all its subdirectories? [yn] } T DELTREE - Delete all files & subdirectories?
+
+
+DELTREEN {[0mDeleting %s...
+} T DELTREE - Deleting directory
+
+
+QDELETE {[0m%s,    Delete(Y/N)?} T DEL - Confirmation of delete
+
+
+DIREXST {[0mDirectory already exists
+} T MD - Directory already exists
+
+
+UNABLEDI {[0mUnable to create directory
+} T MD - Unable to create directory
+
+
+EDITNAME {[0mEnter filename to edit: } T EDIT - Enter filename
+
+
+CURSPEED {[0mCurrent copy speed is %d.
+Enter a new speed [1..200]: } T SPEED - Current copy speed
+
+
+INVLSPD {[0m
+That is an invalid speed.
+Copy speeds may range from 1..200.
+WARNING: High speeds may cause your server to lose response time!
+
+} T SPEED - Invalid speed
+
+
+FILESCOP {[0m%8d file(s) copied
+} T COPY - Files copied
+
+
+OVERWRIT {[0mOverwrite %s (Yes/No/All)? } T COPY - Overwrite file?
+
+
+CNTMOVE {[0mCan not move %s - No such file or directory
+} T Error - Can not move file
+
+
+CNTCRTDS {[0mUnable to create destination - %s
+} T Error - Unable to create destination
+
+
+SRCDSSAM {[0mSource and destination are the same, %s
+} T Error - Source & destination are the same
+
+
+INTERPTD {[0m
+Interrupted!
+} T Listing Interrupted.
+
+
+FILEBAD {[0mAn unknown file error has occured!
+} T Error - File error occurred
+
+
+FNOTFND {[0mFile not found
+} T Error - File not found
+
+
+FNOTFND2 {[0mFile not found - %s
+} T Error - File not found
+
+
+PNOTFND2 {[0mPath not found - %s
+} T Error - Path not found
+
+
+DIREMPTY {[0mDirectory empty
+} T Error - Directory empty
+
+
+INVLFIL {[0mInvalid filename or file not found
+} T Error - Invalid filename or file not found
+
+
+INVPATH {[0mInvalid path, not directory,
+or directory not empty.
+} T Error - Invalid path, not directory, ..
+
+
+INVLPATH {[0mInvalid path or file name
+} T Error - Invalid path or file name
+
+
+INVLDIR {[0mInvalid directory
+} T Error - Invalid Directory
+
+
+INVLDRIV {[0mInvalid drive specification
+} T Error - Invalid drive specification
+
+
+INVLCHAR {[0mInvalid characters in volume label
+
+} T Error - Invalid characters in volume label
+
+
+INVLPARM {[0mInvalid parameter - %s
+} T Error - Invalid parameter
+
+
+INVLSWIT {[0mInvalid switch - %s
+} T Error - Invalid switch
+
+
+ATMPCUR {[0mAttempt to remove current directory
+} T Error - Attempt to remove current directory
+
+
+TOOMNYPR {[0mToo many parameters - %s
+} T Error - Too many parameters
+
+
+REQPARM {[0mRequired parameter missing
+} T Error - Required parameter missing
+
+
+PARMNCRR {[0mParameter not correct - %s
+} T Error - Parameter not correct
+
+
+PERMDEND {[0mPermission denied
+} T Error - Permission denied
+
+
+ACCSDEND {[0mAccess denied
+} T Error - Access denied
+
+
+EDITINUS {[0mAccess denied, editor currently in use.
+} T Error - Access to editor denied
+
+
+OUTMEM {[0mOut of memory - File must be less then 400 lines!
+} T Error - Out of memory (Editor)
+
+
+OUTFMEM2 {[0mOut of memory.
+The recursion process could not continue because there is no more memory
+to store recursed directories.
+} T Error - Out of memory (Recursion)
+
+
+DUPLFILE {[0mDuplicate file name or file not found
+} T Error - Duplicate file name or file not found
+
+
+SYNTAX {[0mSyntax error
+} T Error - Syntax error
+
+
+CPNOSELF {[0mFile cannot be copied onto itself
+} T Error - File cannot be copied onto itself
+
+
+ERRODRIV {[0mNot ready reading drive %c
+Abort, Retry, Fail? } T Error - Error reading drive
+
+
+USNOTFND {[0m
+User not found - %s
+} T Error - User not found
+
+
+FAILINT {[0mFail on INT 24
+} T Fail on INT 24
+
+
+CWDNTFND {[0mWorking directory %s not found.
+
+Please report this error to your Sysop!
+} T Current working directory not found
+
+
+EDITUSR {[0m(Partial UserId acceptable, enter "new" for new user)
+Enter the UserId of the user would like to edit: } T EDITUSER - Which user?
+
+
+DELUSER {[0mAre you sure you want to delete user "%s" from DS-DOS? } T DELUSER - Are you sure?
+
+
+DELUSER2 {[0mDeleting user %s...
+} T DELUSER - Deleting user.
+
+
+USERNSAV {[0mUser information not saved.
+} T EDITUSER - Information not saved.
+
+
+NOTSAVD {[0mNo changes saved.
+} T CONFIG- Information not saved.
+
+
+SETSAVD {[0mAll changes saved!
+} T CONFIG- Information saved.
+
+
+USERSAVD {[0mUser information updated successfully.
+} T EDITUSER - Information saved.
+
+
+USERNGUD {[0mYou must enter a proper UserId!  No info saved!
+} T EDITUSER - Information not saved, no UserId.
+
+
+NOUSERS {[0mNo users in list.
+} T EDITUSER - No DOS users in listing.
+
+
+USERSHDR {[0mCurrent active DOS accounts:
+UserId                       Home Directory                  Can move?
+----------------------------------------------------------------------------
+} T EDITUSER - Listing header
+
+
+USERS {[0m%-29s %-30s %s
+} T EDITUSER - Listing line
+
+
+USERSFTR {[0m----------------------------------------------------------------------------
+} T EDITUSER - Listing footer
+
+
+NDELTREE {[0mSorry, in order to prevent your hard disk from accidental
+deletion, you may not deltree the root directory.
+} T DELTREE - Safety feature
+
+
+BATCHBAD {[0mCan not run batch file.  First line missing DIALDOS token.
+
+In order to run this batch file online, you must add the token "DIALDOS" to
+the first line of the file.  This is a protection feature built into DS-DOS.
+If you would like to disable this feature, turn off batch file protection
+in the "config" setup screen.
+} T Batch files - Safety feature
+
+
+GREPCMD {
+[0;1m%s:[0m
+} T GREP - Current file
+
+
+GREPBAD {
+[0;1mError reading file "%s", may be binary.
+} T GREP - Error, not ascii.
+
+
+HELPME12 {[0m  [1;36;44m                           DS-DOS Command Menu                              [0m
+   [36mﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ
+[1;37mhelp[0m..... Help for commands.           [1mcd [0mor [1mchdir[0m...... Change directory.
+[1mcls[0m...... Clear the screen.            [1mrd [0mor [1mrmdir[0m...... Remove directory.
+[1mver[0m...... Display version.             [1mmd [0mor [1mmkdir[0m...... Make directory.
+[1mdate[0m..... Display/change date.         [1mget [0mor [1mdownload[0m.. Download files.
+[1mtime[0m..... Display/change time.         [1mput [0mor [1mupload[0m.... Upload files.
+[1mattrib[0m... Display/change attributes.   [1mren [0mor [1mrename[0m.... Rename files.
+[1mdir[0m...... View files in a directory    [1mdel [0mor [1merase[0m..... Delete files.
+[1mcopy[0m..... Copy files.                  [1mtype [0mor [1mmore[0m..... View files.
+[1mxcopy[0m.... Copy directories.            [1medit[0m............. Edit files.
+[1mmove[0m..... Move files.                  [1mdeltree[0m.......... Delete dir & subdirs.
+[1mchkdsk[0m... Check file & directories.    [1mclear[0m............ Clear DOSKEY history.
+[1mpause[0m.... Pause and wait for key.      [1mhistory[0m.......... Recall DOSKEY history.
+[1mecho[0m..... Echo characters.             [1mspeed[0m............ Change copy speed.
+[1mprompt[0m... Change current prompt.       [1medituser[0m......... Add/edit DOS users.
+[1mset[0m...... Display environment.         [1mdeluser[0m.......... Delete a DOS user.
+[1mmem[0m...... Display memory information.  [1musers[0m............ Show all DOS users.
+[1mconfig[0m... Configure module settings.   [1mcolors[0m... Configure color settings.
+[1mgrep[0m..... Search for text in a file.
+
+[32mFor more information on the usage of a command, type [1mHELP <command>[0;32m.
+} T Help - Main Menu help
+
+
+HELPHLP {[0;1;31mHELP
+
+[36mThis will show you help.
+
+   [32mUsage: [37mhelp <command>
+ [32mExample: [37mhelp help
+} T Help: HELP command help
+
+
+VERHLP {[0;1;31mVER
+
+[36mThis shows you the current version of DS-DOS.
+
+   [32mUsage: [37mver
+} T Help: VER command help
+
+
+CLSHLP {[0;1;31mCLS
+
+[36mThis will clear your screen.
+
+   [32mUsage: [37mcls
+} T Help: CLS command help
+
+
+REMHLP {[0;1;31mREM
+
+[36mThis is primarily used in batch files to REMark lines from view.
+
+   [32mUsage:  [37mrem (comment)
+ [32mExample:  [37mrem This line is a comment
+} T Help: REM command help
+
+
+DEBUGHLP {[0;1;31mDEBUG
+
+[36mThis is a debugging tool which should be used if you are running into problems
+with DS-DOS.  It shows path information for the programmers at DialSoft.
+
+   [32mUsage:  [37mdebug
+} T Help: DEBUG command help
+
+
+PRMPTHLP {[0;1;31mPROMPT
+
+[36mThis will allow you to change the appearance of the prompt.
+
+   [32mUsage:  [37mprompt [text]
+ [32mExample:  [37mprompt $p$g
+
+ [0mStrings for use in prompts:
+   $Q   = (equal sign)
+   $$   $ (dollar sign)
+   $T   Current time
+   $D   Current date
+   $P   Current drive and path
+   $V   DS-DOS Version number
+   $N   Current drive
+   $G   > (greater-than sign)
+   $L   < (less-than sign)
+   $B   | (pipe, don't smoke it)
+   $_   ENTER-LINEFEED
+   $E   ASCII Escape code (#027)
+   $H   Backspace (delete character in command line)
+} T Help: PROMPT command help
+
+
+ECHOHLP {[0;1;31mECHO
+
+[36mDisplays or hides text while a batch file is running.
+
+    [32mUsage:  [37mecho [ON|OFF|message]
+ [32mExamples:  [37mecho This is my test batch file.       [0mEcho message to screen.
+            [1mecho off                               [0mTurn off all messages.
+            [1mecho .                                 [0mEcho a linefeed.
+} T Help: ECHO command help
+
+
+PAUSEHLP {[0;1;31mPAUSE
+
+[36mPrimarily used in batch files to pause the file and wait for <ENTER>.
+
+   [32mUsage:  [37mpause
+ [32mExample:  [37mpause              [0mWill pause batchfile until user hits <ENTER>.
+} T Help: PAUSE command help
+
+
+TIMEHLP {[0;1;31mTIME
+
+[36mDisplays the current time or set's your computers internal clock.
+
+    [32mUsage:  [37mtime [new time]
+ [32mExamples:  [37mtime                      [0mView current time.
+            [1mtime 12:00p               [0mChange time to 12:00 pm.
+} T Help: TIME command help
+
+
+DATEHLP {[0;1;31mDATE
+
+[36mDisplays the current date or set's your computers internal date.
+
+    [32mUsage:  [37mdate [newdate]
+ [32mExamples:  [37mdate                      [0mDisplay current date.
+            [1mdate 8/26/96              [0mChange current date to 08/26/96.
+} T Help: DATE command help
+
+
+VOLHLP {[0;1;31mVOL
+
+[36mDisplays volume information on the specified drive.
+
+   [32mUsage:  [37mvol [drivespec]
+ [32mExample:  [37mvol                    [0mDisplay volume info for current drive.
+           [1mvol d:                 [0mDisplay volume info for drive d:.
+} T Help: VOL command help
+
+
+DIRHLP {[0;1;31mDIR
+
+[36mView files and subdirectories in a directory. Wildcard supported.
+
+   [32mUsage:  [37mDIR [filespec] {switches~}
+[32mExamples:  [37mdir              [0mList all files in current directory.
+           [1mdir c:\temp      [0mList all files in directory C:\TEMP
+           [1mdir c:\ /s       [0mList all files on drive C:
+           [1mdir *.exe /p     [0mList all *.EXE files, pausing each screen.
+
+  Switches supported:
+    /P   Displays information one screen at a time, pausing after each one.
+    /W   Displays information in wide format.
+    /AH  Displays only hidden files.    (/A-H for all files BUT hidden)
+    /AS  Displays only system files.    (/A-S for all files BUT system)
+    /AA  Displays only archive files    (/A-A for all files BUT archive)
+    /AD  Displays only directories      (/A-D for all files BUT directories)
+    /AR  Displays only read-only files. (/A-R for all files BUT read-only)
+    /S   Lists every occurence in current directory and subdirectories.
+    /B   Lists only filenames, no header or footer information.
+    /L   Displays filenames and directories in lowercase.
+} T Help: DIR command help
+
+
+CDHLP {[0;1;31mCD or CHDIR
+
+[36mThis will allow you to change your current directory.
+
+   [32mUsage:  [37mcd [directory]
+[32mExamples:  [37mcd               [0mDisplay current directory.
+           [1mcd\              [0mChange to root directory of current drive.
+           [1mcd\temp          [0mChange to \TEMP directory on current drive.
+           [1mcd..             [0mChange to parent directory.
+} T Help: CD command help
+
+
+MDHLP {[0;1;31mMD or MKDIR
+
+[36mThis will allow you to make a directory.
+
+   [32mUsage:  [37mmd [directory]
+[32mExamples:  [37mmd temp               [0mMake directory "TEMP".
+           [1mmd c:\temp\temp2      [0mMake directory "TEMP2" in directory "TEMP".
+} T Help: MD command help
+
+
+RDHLP {[0;1;31mRM or RMDIR
+
+[36mThis will allow you to remove a directory.
+
+   [32mUsage:  [37mrd [directory]
+[32mExamples:  [37mrd temp             [0mRemove directory "TEMP".
+           [1mrd c:\temp\temp2    [0mRemove directori "TEMP2" from "TEMP".
+} T Help: RD command help
+
+
+DELHLP {[0;1;31mDEL or ERASE
+
+[36mThis will delete files from your drive.
+
+   [32mUsage:  [37mdel [filespec] {switches~}
+[32mExamples:  [37mdel file.txt          [0mDelete the file with the name "file.txt".
+           [1mdel *.*               [0mDelete all files in current directory.
+           [1mdel *.* /P            [0mDelete ALL files confirming each one.
+           [1mdel c:\text\*.txt     [0mDelete all *.TXT files from c:\text
+
+  Switches supported:
+    /P   Confirm each file deletion[1m.
+} T Help: DELETE command help
+
+
+ATTRHLP {[0;1;31mATTRIB
+
+[36mThis will allow you to view or change a files attributes.
+
+   [32mUsage:  [37mattrib [parameters]
+[32mExamples:  [37mattrib             [0mView attributes of all files in current dir.
+           [1mattrib +r          [0mAdd the read-only flag to all files in directory.
+           [1mattrib test.exe +s [0mAdd the system flag to the file test.txt
+
+  Paramaters supported:
+    +R   Adds read-only attribute.
+    -R   Removes read-only attribute.
+    +S   Adds system attribute.
+    -S   Removes system attribute.
+    +H   Adds hidden attribute.
+    -H   Removes hidden attribute.
+    +A   Adds archive attribute.
+    -A   Removes archive attribute
+} T Help: ATTRIB command help
+
+
+TYPHLP {[0;1;31mTYPE or MORE
+
+[36mThis will allow you to view a text file.
+
+   [32mUsage:  [37mtype [filespec] {/#~}
+[32mExamples:  [37mtype file.txt     [0mDisplays the file "file.txt" on your screen.
+           [1mmore file.txt     [0mDisplay "file.txt" on your screen, page by page.
+
+  Switches supported:
+    /#   Display line numbers.
+} T Help: TYPE command help
+
+
+GREPHLP {[0;1;31mGREP
+
+[36mThis will allow you to scan a file for a string.
+
+   [32mUsage:  [37mgrep [string] [filespec] {/#~}
+[32mExamples:  [37mgrep hello f.txt      [0mDisplays all occurrences of "hello" in f.txt
+           [1mgrep test *.txt       [0mDisplay all occurrences of "test" in *.txt
+           [1mgrep test *.txt /4    [0mDisplay  occurrences of "test" in *.txt
+                                 with 4 lines displayed after each occurrence.
+
+  Switches supported:
+    /#   Display # lines of text after successful find.
+} T Help: GREP command help
+
+
+UPLHLP {[0;1;31mUPLOAD or PUT
+
+[36mThis will let you upload files into a directory.
+
+[32mExamples:  [37mupload file.txt     [0mUpload "file.txt", prompt for protocol.
+           [1mupload file.txt Z   [0mUpload "file.txt" using Z-modem protocol.
+           [1mupload * Z          [0mUpload multiple files using Z-modem protocol.
+} T Help: UPLOAD command help
+
+
+DNLHLP {[0;1;31mDOWNLOAD or GET
+
+[36mThis will let you download files from a directory.
+
+[32mExamples:  [37mdownload file.txt     [0mDownload "file.txt", prompt for protocol.
+           [1mdownload file.txt Z   [0mDownload "file.txt" using Z-modem protocol.
+           [1mdownload *.* Z        [0mDownload multiple files using Z-modem.
+} T Help: DOWNLOAD command help
+
+
+EDITHLP {[0;1;31mEDIT
+
+[36mThis will allow you to edit a file in a directory.  If the file does not
+exist, it will be created.
+
+   [32mUsage:  [37medit [filespec]
+[32mExamples:  [37medit file.txt     [0mEdit the file "file.txt" if it exists, if not
+                             create it.
+           [1medit              [0mEdit a file, prompt for name.
+} T Help: EDIT command help
+
+
+SETHLP {[0;1;31mSET
+
+[36mThis will display some environment variables.
+
+   [32mUsage:  [37mset
+} T Help: SET command help
+
+
+LABELHLP {[0;1;31mLABEL
+
+[36mAllows you to change the current volume label of a drive.
+
+   [32mUsage:  [37mlabel
+ [32mExample:  [37mlabel
+
+[31m*Currently not working.  Some systems with boot-sector virus protection do not
+ like the LABEL command!
+} T Help: LABEL command help
+
+
+RENHLP {[0;1;31mREN or RENAME
+
+[36mThis will rename files.  Wildcards supported.
+
+   [32mUsage:  [37mren [oldname] [newname]
+ [32mExample:  [37mren file.txt file.tst     [0mRename "file.txt" to "file.txt".
+           [1mren *.txt *.bak           [0mRename all .txt files to *.bak.
+           [1mren c:\temp\t.exe s.exe   [0mRename c:\temp\t.exe to s.exe.
+} T Help: RENAME command help
+
+
+COPYHLP {[0;1;31mCOPY
+
+[36mThis will copy files. Wildcards supported.
+
+   [32mUsage:  [37mcopy [srcfile] [destfile] {switches~}
+ [32mExample:  [37mcopy file.txt file.tst    [0mCopy "file.txt" to "file.txt".
+           [1mcopy c:\temp\*.* d:       [0mCopy all files from c:\temp to drive D:
+           [1mcopy *.* \temp /y         [0mCopy all files to \temp overwriting all.
+
+  Switches supported:
+    /Y   Overwrite all duplicate files without prompting for overwrite.
+  } T Help: COPY command help
+
+
+MOVEHLP {[0;1;31mMOVE
+
+[36mThis will move files from one directory into another.
+
+   [32mUsage:  [37mmove [srcfile] [destfile] {switches~}
+ [32mExample:  [37mmove *.* \temp             [0mMove all files to directory \TEMP
+           [1mmove *.exe \temp\*.bak     [0mMove all *.EXE files to \TEMP as *.BAK
+           [1mmove c:\temp c:\temp2      [0mMove all files in c:\temp to c:\temp2
+
+  Switches supported:
+    /Y    Overwrite all duplicate files without prompting for overwrite.
+} T Help: MOVE command help
+
+
+XCOPYHLP {[0;1;31mXCOPY
+
+[36mThis will copy directories.
+
+   [32mUsage:  [37mxcopy [srcdir] [destdir] {switches~}
+
+ [32mExample:  [37mxcopy c:\temp d:\temp      [0mCopy directory c:\temp to d:\temp.
+           [1mxcopy c:\ d:\ /s           [0mCopy all files & dirs from c:\ to d:\
+           [1mxcopy c:\temp e:           [0mCopy c:\temp to drive E:
+
+  Switches supported:
+    /Y   Overwrite all duplicate files without prompting for overwrite.
+    /S   Copy all subdirectories.
+} T Help: XCOPY command help
+
+
+CHKDSHLP {[0;1;31mCHKDSK
+
+[36mDisplays file & directory information.
+
+   [32mUsage:  [37mchkdsk [drive]
+[32mExamples:  [37mchkdsk            [0mCheck current drive.
+           [1mchkdsk a:         [0mCheck drive A:
+} T Help: CHKDSK command help
+
+
+MEMMHLP {[0;1;31mMEM
+
+[36mShows you various information about your system's memory configuration.
+
+   [32mUsage:  [37mmem
+[32mExamples:  [37mmem
+} T Help: MEM command help
+
+
+HISTHLP {[0;1;31mHISTORY
+
+[36mWill show all the commands in your DOSKEY history.
+
+   [32mUsage:  [37mhistory
+[32mExamples:  [37mhistory
+} T Help: HISTORY command help
+
+
+CLEARHLP {[0;1;31mCLEAR
+
+[36mWill clear your DOSKEY history.
+
+   [32mUsage:  [37mclear
+[32mExamples:  [37mclear
+} T Help: CLEAR command help
+
+
+DELTRHLP {[0;1;31mDELTREE
+
+[36mThis will delete a directory and all the files & subdirectories under it.
+
+   [32mUsage:  [37mdeltree [dir]
+[32mExamples:  [37mdeltree c:\temp
+} T Help: DELTREE command help
+
+
+SPEEDHLP {[0;1;31mSPEED
+
+[36mWill change your current copy speed.
+
+   [32mUsage:  [37mspeed [1..200]
+[32mExamples:  [37mspeed
+           [1mspeed
+
+  WARNING:
+    Speeds in excess of 100 may cause your server to lose response time.
+} T Help: SPEED command help
+
+
+USERHLP {[0;1;31mEDITUSER
+
+[36mWill add/edit a user's DOS settings.  Partial UserId acceptable.
+
+   [32mUsage:  [37medituser [userid|new]
+[32mExamples:  [37medituser sysop             [0mEdit "Sysops" dos settings.
+           [1medituser new               [0mEdit settings for a new user.
+           [1medituser                   [0mEdit settings, prompt for name.
+} T Help: EDITUSER command help
+
+
+DUSRHLP {[0;1;31mDELUSER
+
+[36mThis will allow you to delete a user's DOS account.
+
+   [32mUsage:  [37mdeluser <userid>
+[32mExamples:  [37mdeluser joe         [0mDelete Joe's DS-DOS access.
+} T Help: DELUSER command help
+
+
+USERSHLP {[0;1;31mUSERS
+
+[36mWill show all DOS accounts.
+
+   [32mUsage:  [37musers
+[32mExamples:  [37musers
+} T Help: USERS command help
+
+
+CFGHLP {[0;1;31mCONFIG
+
+[36mWill configure all DS-DOS settings.
+
+   [32mUsage:  [37mconfig
+[32mExamples:  [37mconfig
+} T Help: CONFIG command help
+
+
+
+LEVEL99 {}
+
+
+CNF10 {[0m [1;36;44m DS-DOS Configuration Settings [0m
+ [1;34mﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ                                    [31m^G - Save
+                                                                    ^O - Abort
+  [0m                                                 [1m                 [31m^F - Insert
+  [0mKey required for "sysop" access................. [1m???????????????
+  [0mEnable master password.......................... [1m???
+  [0mMaster password................................. [1m????????
+  [0mRecord Uploads/Downloads to audit trail......... [1m???
+  [0mEnable batch file protection.................... [1m???
+
+  [0mChoice: [1m???? [30m(SAVE, EDIT, QUIT)
+
+ [31m!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+} T Configuration Screen 1
+
+
+CNF20 {[0m [1;36;44m DS-DOS Extension Color Settings [0m
+ [1;34mﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ
+                                                                     [35mColors:
+ [0mDirectory Color......  [1m???????????
+                                                                     [0;31mRED
+ [1;34mFilenames   Extension  Color           Extension  Color             [0;32mGREEN
+                [37m1. [1m???  ???????????        [0m2. [1m???  ???????????       [0;33mBROWN
+                [37m3. [1m???  ???????????        [0m4. [1m???  ???????????       [0;34mBLUE
+                [37m5. [1m???  ???????????        [0m6. [1m???  ???????????       [0;35mMAGENTA
+                [37m7. [1m???  ???????????        [0m8. [1m???  ???????????       [0;36mCYAN
+                [37m9. [1m???  ???????????       [0m10. [1m???  ???????????       [0mGRAY
+               11. [1m???  ???????????       [0m12. [1m???  ???????????       [30mMED.GRAY
+               [0m13. [1m???  ???????????       [0m14. [1m???  ???????????       [31mLT.RED
+               [0m15. [1m???  ???????????       [0m16. [1m???  ???????????       [32mLT.GREEN
+               [0m17. [1m???  ???????????       [0m18. [1m???  ???????????       [36mLT.CYAN
+               [0m19. [1m???  ???????????       [0m20. [1m???  ???????????       [34mLT.BLUE
+                                                                     [35mPINK
+                                                                     [33mYELLOW
+  [0mChoice: [1m???? [30m(SAVE, EDIT, QUIT)                                    [37mWHITE
+
+
+ [31m!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     Hit [0;31m<SPACE> [1mto scroll through colors, or type in the color you want!
+} T Configuration Screen 2
+
+
+
+
+CNF30 {[0m [1;36;44m Add/Edit User Settings [0m
+ [1;34mﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂ
+
+               [0mUserId: [1m?????????????????????????????
+             [0mPassword: [1m????????
+       [0mHome directory: [1m??????????????????????????????????????????????????
+
+    [0mCan user access other directories and drives? [1m???
+
+    [0;36mIndividual access to commands:
+    [37mTYPE ..... [1m???     [0mEDIT ..... [1m???     [0mDATE ..... [1m???     [0mTIME ..... [1m???
+    [0mATTRIB ... [1m???     [0mRENAME ... [1m???     [0mCOPY ..... [1m???     [0mXCOPY .... [1m???
+    [0mMOVE ..... [1m???     [0mMD ....... [1m???     [0mRD ....... [1m???     [0mGET ...... [1m???
+    [0mPUT ...... [1m???     [0mDEL ...... [1m???     [0mDELTREE .. [1m???     [0mSPEED .... [1m???
+    [0mGREP ..... [1m???
+
+    [0mChoice: [1m???? [30m(SAVE, EDIT, QUIT)
+
+ [31m!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+} T Configuration Screen 3
+
+

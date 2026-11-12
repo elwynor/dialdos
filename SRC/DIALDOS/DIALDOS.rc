@@ -1,0 +1,35 @@
+/* Build 26.11.12.4 05:15PM */
+/* DIALDOS.rc - Windows version resource for the DS-DOS Shell module DLL.   */
+/* Keep the numbers in step with DIALDOS_VERSION in DIALDOSH.H.             */
+
+#include <winver.h>
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,9,0,0
+ PRODUCTVERSION 3,9,0,0
+ FILEFLAGSMASK 0x3fL
+ FILEFLAGS 0x0L
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_DLL
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName",      "Elwynor Technologies"
+            VALUE "FileDescription",  "DS-DOS Shell - DOS-style command shell for The Major BBS v10"
+            VALUE "FileVersion",      "3.9.0.0"
+            VALUE "InternalName",     "DIALDOS"
+            VALUE "LegalCopyright",   "Copyright (C) 1996-2026 DialSoft Corp."
+            VALUE "OriginalFilename", "DIALDOS.DLL"
+            VALUE "ProductName",      "DS-DOS Shell"
+            VALUE "ProductVersion",   "3.9.0"
+            VALUE "Comments",         "DS-DOS Shell converted for The Major BBS v10 by Mark Laudenbach - https://github.com/laudenbachm for Elwynor Technologies."
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

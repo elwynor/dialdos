@@ -1,0 +1,29 @@
+; DIALDOS.MDF
+; DS-DOS Shell 3.9.0 - (C)Copyright DialSoft Corp 1996-2026.
+
+Module Name: DS-DOS Shell
+
+Developer: DialSoft! (The Major BBS v10 port by Elwynor Technologies)
+
+Requires:
+Replaces:
+
+Install:
+
+Online user manual: DIALDOS.RLN
+
+DLLs: DIALDOS
+MSGs: DIALDOS
+
+Btrieve page size: 1024
+Btrieve files: 1
+
+Cleanup:
+
+Event-1:
+Event-2:
+Event-3:
+Event-4:
+
+Add-On utility:
+

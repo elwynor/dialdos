@@ -1,0 +1,8 @@
+; Build 26.11.12.4 05:15PM
+; Filename: DIALDOS_EXP.DEF
+LIBRARY DIALDOS.DLL
+; DS-DOS Shell - Copyright (C) 1996-2026 DialSoft Corp.
+; Export alias for the module entry point (Win32 / x86 build).
+; The BBS calls init__<modname>; the decorated cdecl symbol is _init__dialdos.
+EXPORTS
+	_init__dialdos=init__dialdos	@1

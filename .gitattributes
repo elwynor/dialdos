@@ -1,0 +1,27 @@
+# The Major BBS configuration editor can only read .MSG files with CRLF line
+# endings, and the file holds raw ESC/0x01 bytes - never let git touch it.
+*.MSG binary
+*.msg binary
+
+# Windows sources and docs: CRLF in the working tree.
+*.C text eol=crlf
+*.H text eol=crlf
+*.rc text eol=crlf
+*.DEF text eol=crlf
+*.MDF text eol=crlf
+*.DOC text eol=crlf
+*.TXT text eol=crlf
+*.sln text eol=crlf
+*.vcxproj text eol=crlf
+*.props text eol=crlf
+
+*.DLL binary
+*.zip binary
+*.VIR binary
+*.DAT binary
+*.RLN binary
+*.ALT binary
+*.BCR text eol=crlf
+*.CMD text eol=crlf
+*.PY text eol=crlf
+*.MD text eol=crlf

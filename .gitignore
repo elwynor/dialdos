@@ -1,0 +1,84 @@
+# ---------------------------------------------------------------------------
+# DS-DOS Shell - .gitignore
+# Only files required to build, test, document, or deploy the module belong
+# in the public repository.
+# ---------------------------------------------------------------------------
+
+# --- Internal development documents (never publish) ---
+MEMORY.MD
+PROJECT_STATUS.MD
+/DOCS/
+/NOTES/
+/Notes/
+/ORIGSRC/
+/SCRATCH/
+/PRIVATE/
+/INTERNAL/
+/TOOLS/__pycache__/
+/BUGREPORTS/
+
+# --- Credentials / environment-specific config ---
+*.env
+.env
+CONFIG.INI
+*.local
+*.LOCAL.INI
+secrets.*
+
+# --- Local machine SDK path (ship MBBSSDK.props.example instead) ---
+MBBSSDK.props
+
+# --- Visual Studio / MSBuild ---
+.vs/
+[Dd]ebug/
+[Rr]elease/
+[Ww]in32/
+[Xx]86/
+[Bb]in/
+[Oo]bj/
+ipch/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.opendb
+*.pdb
+*.idb
+*.ilk
+*.tlog
+*.lastbuildstate
+*.obj
+*.exp
+*.log
+
+# --- Release packages (attached to GitHub releases, never committed) ---
+/DIST/
+
+# --- Build output (keep the BUILD/ folder, ignore its contents) ---
+/BUILD/*
+!/BUILD/.gitkeep
+
+# --- BBS runtime output ---
+*.MCV
+*.DAT
+*.IMP
+*.OUT
+
+# --- Python ---
+__pycache__/
+*.pyc
+
+# --- Temp files ---
+*.tmp
+*.temp
+*.bak
+*.swp
+~$*
+Thumbs.db
+desktop.ini

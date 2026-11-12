@@ -1,0 +1,362 @@
+  ==========================================================================
+  =                              DS-DOS Shell                              =
+  ==========================================================================
+
+     Version: 3.9.0
+        Date: November 12, 2026
+  Programmer: Richard Iglar
+    v10 port: Mark Laudenbach (https://github.com/laudenbachm)
+
+  ==========================================================================
+
+   Compiled for:
+     The Major BBS v10
+
+   (C)Copyright DialSoft Corp 1996-2026.
+
+  ==========================================================================
+
+  *** Installation ***
+
+   1. Stop the BBS.  Unzip the release into the BBS directory:
+      DIALDOS.DLL, DIALDOS.MDF, DIALDOS.MSG and DIALDOS.RLN go in the
+      BBS directory, and DIALDOS.VIR goes in its GCVIRDAT folder.
+   2. Start the BBS.  The first time it starts, DS-DOS creates DIALDOS.DAT
+      from GCVIRDAT\DIALDOS.VIR (or from DIALDOS.VIR in the BBS
+      directory).  An existing DIALDOS.DAT is never overwritten.
+   3. Add "DS-DOS Shell" to your menu tree.
+   4. CNF Options: None!  All settings are changed online with the
+      "config" command (master key holders only).
+   5. New installs start with: sysop key SYSOP, master password SYSOP
+      (master password not enabled), uploads/downloads recorded in the
+      audit trail, and batch file protection on.  Use "config" to change
+      them.
+
+   The DIALDOS.DAT record layout is unchanged from the WorldGroup
+   releases.
+
+  ==========================================================================
+
+  *** Features & Usage ***
+
+   . Supports most of the standard commands that Microsoft MS-Dos 6.22
+     offers you.
+   . Typing "HELP" or "?" in the shell will give you help.  For help
+     on commands, type "HELP <command>" or "<command> /?"
+   . MS-DOS Style Commands supported:
+      dir          del/erase      pause
+      ver          ren/rename     echo
+      chkdsk       type/more      vol
+      cd/chdir     edit           label
+      md/mkdir     copy           prompt
+      rd/rmdir     xcopy          time
+      cls          move           date
+      set          attrib
+   . DialSoft DS-DOS commands:
+      history
+      clear
+      user
+      users
+      grep
+      colors
+   . Switches supported (various commands): /S /P /Y |MORE /B /W /L
+   . You can run BATCH files within DS-DOS if they include commands
+     that are understood by DS-DOS!  Try it out!
+     Simply use the batch file as you would normally, and it'll run!
+     Commands that are not recognized by DS-Dos are ignored.
+   . Use CTRL-C to abort commands/listings as you would normally
+     do in MS-DOS!
+   . Almost every possible form of DIR is supported!  Switches I have
+     currently implemented are:
+       /P - Pausing every page
+       /S - Subdirectory listings!
+       /Ax - Attribute listings (Archive,Directory,System,Readonly,Hidden)
+       /W - Wide mode
+       /B - Brief mode (only filenames listed)
+       /L - Lowercase output
+     I'll work on sorting /Oxx parameters next!
+   . You may use the "| more" operation to pause screen ouput, similar
+     to the way it works in MS-DOS. You can not redirect to anything
+     other than "more".  I personally have not used the "|" operator
+     on anything but "more" but if someone has a suggestion, let me
+     know!
+      Examples:  dir /s |more
+                 type test.txt |more
+   . The XCOPY command *WILL* work with the /S parameter to copy all
+     subdirectories.  It will copy ALL subdirectories in a directory
+     whether they have files or not.  (/E parameter is ignored, but
+     it will copy empty subdirectories)
+   . Cursor UP and DOWN at the command prompt!  Works just like DOSKEY
+     does in MS-DOS.  You can backspace through the commands to edit
+     them as well, I like to call it DIALKEY!
+   . The > redirector will turn off command output. This is done only
+     because some batch files I use are redirected to "nul".
+   . I tried to make everything as compatible to MS-DOS as possible.
+     If a format you use isn't supported- let me know and I will
+     accomodate your needs.
+   . Automatic saving of current directory, working directories, and
+     DOSKEY history.
+   . The LABEL command is inactive because writing to the LABEL of
+     a C: drive can trigger any bootsector virus checkers causing
+     your system to hang.
+   . Now allows support for giving users their own DOS directories,
+     as well as configuring which commands are available to them!
+  ==========================================================================
+
+  *** Revision History ***
+
+  Version 1.0á - May 5, 1996
+   . First beta release.
+
+  Version 1.1á - May 21, 1996
+   . Fixed TYPE problem. (%s's would show up as <NULL POINTERS>)
+   . Fixed CHKDSK problem, chkdsk would only work on the current drive
+     that you were on.
+
+  Version 1.2á - May 22, 1996
+   . Fixed problem with GP's happening when files were uploaded.
+
+  Version 1.3á - May 28, 1996
+   . Fixed problem with CHKDSK not working, as well as volume labels
+     being printed as "the last file accessed..".  This was all linked
+     to the fact that some hard drives had "no label."  This problem
+     should *hopefully* be fixed now!
+   . Someone reported a problem with copying files from networked drives.
+     We have successfully backed up our WHOLE bbs onto a network drive,
+     so we don't have this problem (using DS-DOS).  If anyone else
+     runs into a similar error, please let me know!
+
+  Version 1.4á - June 1, 1996
+   . Fixed the .MSG block error for help on the MOVE command.  Instead
+     of showing the help for MOVE it showed the help for COPY.
+   . Added the saving of your working environment!  If you left DS-DOS
+     in the C:\MYDIR\IS\COOL directory, next time you enter DS-DOS
+     you will return to that directory with all of your DOSKEY history
+     remembered!  This will work even if you logoff the system, and
+     call back in 25 years!
+   . Added commands:
+     history - will display all commands in your DOSKEY history.
+     clear   - will clear all the commands in your DOSKEY history.
+
+  Version 1.5á - June 6, 1996
+   . Special fix for Neil's BBS.  Couldn't change directories because
+     there was a NULL device in his BIOS table. Fixed!
+
+  Version 1.6á - June 13, 1996
+   . Fixed a little error on my part (ack!) for copying files to the
+     root directory.  If you were at C:\ and typed:
+       copy \somedir\filename.txt
+     It would reply: "Path not found- C:\*.*\"
+   . Fixed an error where directories on Netware volumes couldn't be
+     created.  This is caused by Netware's file system. Even if the
+     directory didn't exist, it would say it did.  Fixed!
+   . Added the DELTREE command!  Yes, a very powerful command indeed.
+     It should work 100% fine.  It will not let you deltree the root
+     directory of any drive at all, this is for your safety.
+   . Added the SPEED command.  The speed command will allow you to
+     alter the rate at which files copy on your system!  Each copy
+     cycle, the number of bytes copied equals: 256*Current speed.
+
+     The default speed is 50: Which means 10,240 bytes are copied
+     per cycle.  Each speed is independent of the user. Your current
+     speed is saved with your environment, so if you set your speed
+     to 75, the next time you come in your speed will be 75!
+
+     For information, here's a benchmark I did on my NEC Versa notebook.
+     (486dx2-50 processor):
+
+     Command: XCOPY C:\PROWIN3 C:\RICHIE /S
+
+     Total copied bytes: 35,009,504 (35 megs!)
+
+       Speed ==   2 : 10 minutes (512 bytes per cycle)
+       Speed == 100 :  7 minutes (25,600 bytes per cycle)
+
+     Note: High speeds may cause your server to lose response time!
+           Test it out to see the optimal copy speed.
+
+   . Fixed an error with XCOPY.  If you tried to XCOPY a directory which
+     had no files, but had subdirectories XCOPY would tell you that the
+     directory is empty.  Fixed!
+   . Added some usage to the MEM command.  Will now tell you the amount
+     of high memory available, as well as the current VDA (Volatile Data
+     Area) settings. I don't know what possible use this command would
+     bring anyone, but someone requested it, so here it is!
+
+  Version 1.7á - June 15, 1996
+   . Several people have left us messages saying DS-DOS isn't deleting
+     certain files.  At first I doubted this, but thanks to
+     Jason's buffered message to me, figuring out the problem
+     was trivial.  Using "DEBUG" mode, Jason buffered a session in DS-DOS
+     in which he ATTRIB'd and DEL'd files.
+
+     The problem was that DS-DOS wouldn't touch files if they didn't have
+     the "A"rchive flag set.  This problem has been fixed for the DEL, COPY,
+     XCOPY, MOVE, and REName command.  Please let me know if it happens
+     again, and thanks a lot, Jason!
+   . There was also a message file problem, sorry about that! Fixed now!
+
+
+  Version 1.8á - June 21, 1996
+   . Added DS-DOS exit message by special request!
+   . Improved the speed of directory recursion by 100%!  Improved
+     the recursion routine to hold a larger amount of directories,
+     without using up any extra memory! Commands such as DIR/S
+     and CHKDSK should run twice as fast, now!
+
+  Version 1.9á - July 8, 1996
+   . Fixed a problem with recursion.  Commands such as DIR *.MSG failed
+     because I forgot to check that aspect of recursing. :(
+     Fixed now! :)
+
+  Version 2.0 - August 14, 1996
+   . Now you can give users access to specific directories in DS-DOS!
+     I built in a full user add/edit routine so you can add users, and
+     specify a directory for them to start in.  From here,  you can
+     set which commands they have access to in the full screen data
+     entry session.  You may also set it so that the user may NOT
+     move to a parent directory of the directory that he/she is in.
+
+     For example, if you have multi-homed web-sites, and you want to
+     give a user access to his web-site, you can set his home directory
+     to be:
+
+     c:\wgserv\webpages\user
+
+     and set it so he can't move to any previous directory.  He can
+     although navigate within his home directory, and create/remove
+     subdirectories under his directory (assuming he has access to the
+     MD and RD commands).
+
+   . All user accounts have passwords for security reasons, each password
+     is specific to the user.
+   . Added the "edituser", "deluser", and "users" commands to the DS-DOS
+     shell.  Check them out!!
+   . Added CNF Level 4 option "AIDTXFER" which allows you to record
+     all upload/downloads from the shell to the Audit trail.
+   . Added CNF Level 4 option "BATCHPRT" for batch file protection.  With
+     this option enabled, batch files will not run unless the first line
+     of the batch file has the token "DIALDOS" in it.  This is so people
+     don't run batch files by accident, etc.
+   . I am now using a new library in place of the old one I was using.
+     This should have no side effects, it should actually be more
+     efficient, but I doubt any difference will be noticed.
+   . All bugs related to: dir /s  have been fixed.
+
+
+  Version 3.0 - October 14, 1996
+   . DS-DOS is the first NO MSG compliant module released from DialSoft.
+     All options previously found in LEVEL3 and LEVEL4 CNF are now moved
+     online for YOUR convenience.
+   . Fixed a problem with the editor, always added a blank first line to all
+     saved files.  Now works correctly.
+
+  Version 3.1 - October 20, 1996
+   . Fixed a wierd issue where the "DELTREE" command would hang you up
+     if you deleted a large directory.
+
+  Version 3.2 - October 28, 1996
+   . Fixed problem with changing a users home directory.
+
+  Version 3.4 - February 2, 1997
+   . Fixed infamous "CD" and "RD" problems with empty directories on Novell
+     servers!
+   . Fixed a problem with invalid directories for users.
+
+  Version 3.5 - February 12, 1997
+   . Added "colors".  Now you can modify your directory listings with COLOR!
+     You can specify a color for all directories, as well as having 20
+     different colors for filenames by association colors with the extension
+     of the filename!  Each user can have their own color settings!
+
+  Version 3.53 - April 15, 1997
+   . Fixed stupid xcopy /s bug.  My fault! Pttth!
+
+  Version 3.6 - May 14, 1997
+   . Added GREP command!  I needed it badly for a couple projects, and I
+     think it is a GREAT addition to this package.
+   . You may also pipe to grep in certain situations!
+
+     For example:
+
+       dir | grep 05-13-97           - will list all files with todays date!
+
+     You can get even fancier and do this:
+
+       dir | grep 05-13-97 | more    - to get --more-- pauses!
+
+
+     Note: Before you can use the GREP command, be sure to EDITUSER yourself
+           to enable your access to that command!  By default, all newly
+           added commands are disabled for ALL users.  Type HELP GREP online
+           for more info!
+
+     Note #2: The speed of the grep command is controlled by the SPEED
+              option which controls the speed of copying as well.  A higher
+              speed value will increase performance,  but it may also
+              slow down your system response time.  The default value of
+              50 should be sufficient.
+
+   . Fixed "edituser" bug where if you entered a handle with a space in it,
+     it would load the wrong user.
+   . Aliased some basic commands with unix commands.  This was requested
+     by someone who wanted this support, these commands are only documented
+     here:
+
+       DOS        Unix equivalent
+       ---------------------------
+       dir        ls
+       copy       cp
+       xcopy      xcp
+       move       mv
+       del        rm
+       rd         rmdir
+       md         mkdir
+       edit       vi
+       type       cat
+
+   . Increased DS-DOS's editor buffer to 32,000 bytes!  Now you can edit
+     files upto 400 lines large!
+   . Added a switch to the TYPE command.  Use type <file> /# and it will
+     display line numbers with the file, so you can see how large it is.
+   . Fixed a problem with entering DS-DOS for the first time, and having
+     an incorrect directory.
+   . Increased recursion buffer.
+
+  Version 3.7 - June 6, 1997
+   . Increased overall performance, 500% speed increase! whooooooosh!
+   . Fixed problem with HISTORY command.
+   . Fixed small | GREP problem.
+
+  Version 3.8 - July 9, 1997
+   . WorldGroup 3.0 port.
+
+  Version 3.9.0 - November 12, 2026
+   . Ported to The Major BBS v10 by Mark Laudenbach.
+   . Activation codes and the 14-day demo are gone; the module is fully
+     enabled.  The activation code field is removed from "config".
+   . Removed the install-day e-mail that sent the BBS's name, address and
+     phone numbers to DialSoft.
+   . ATTRIB +A/-A, +H/-H, +R/-R and +S/-S change file attributes again
+     (the Windows NT build ignored them).
+   . TIME shows the actual current time (the Windows NT build did not).
+   . DIR and CHKDSK report free space in bytes, correctly on large drives.
+   . Large numbers get their commas in the right places (1,234,567).
+   . The COPY percentage meter works on files over 21 MB.
+   . Long Windows file names no longer overrun internal buffers in COPY,
+     MOVE, XCOPY /S, DIR /S, DELTREE or file downloads.
+   . A BBS with no PROMPT environment variable gives new DS-DOS users the
+     MS-DOS default prompt ($p$g) instead of failing.
+   . $H in a PROMPT is a backspace (it printed an "8").
+   . A long file name typed as an argument is refused instead of being
+     cut to 8.3 (DEL REPORT_2024_OLD.DOC could delete REPORT_2.DOC).
+     Paths too long for DS-DOS are skipped or refused, never cut short.
+   . MOVE keeps the source file if the copy fails (e.g. a full disk).
+   . EDIT refuses a file too large for the editor instead of opening
+     part of it (saving used to lose the rest of the file).
+   . Users kept in a home directory can no longer reach a directory
+     whose name merely starts the same way.
+   . DEBUG needs the sysop key.
+   . A caller who drops no longer leaves files open or EDIT locked.
+   . DIR and CHKDSK totals are correct past 2 GB.
+   . CHKDSK no longer counts directories left from an aborted DIR /S.
